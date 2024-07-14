@@ -1,3 +1,7 @@
+## 0.1.2
+
+- Change supported Dart version
+
 ## 0.1.1
 
 - Update documents

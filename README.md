@@ -15,13 +15,13 @@ Add this to your package's `pubspec.yaml` file:
 
 ```yaml
 dependencies:
-  test_builder: ^1.0.0
+  test_builder: ^0.1.0
 ```
 
 Then run:
 
 ```
-$ flutter pub get
+flutter pub get
 ```
 
 ## Usage

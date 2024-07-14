@@ -15,7 +15,7 @@ Add this to your package's `pubspec.yaml` file:
 
 ```yaml
 dependencies:
-  test_builder: ^0.1.0
+  test_builder: ^0.1.1
 ```
 
 Then run:

@@ -31,12 +31,14 @@ mixin UnitBuilder<Unit, Args> {
   /// Sets the factory function used to create the initial unit.
   ///
   /// This method must be called before [buildUnit] is invoked.
-  void setUnitFactory(UnitFactory<Unit, Args> unitFactory) => _unitFactory = unitFactory;
+  void setUnitFactory(UnitFactory<Unit, Args> unitFactory) =>
+      _unitFactory = unitFactory;
 
   /// Adds an arrangement function to modify or wrap the unit after its initial creation.
   ///
   /// Arrangements are applied in reverse order of addition, allowing for nested wrapping.
-  void addUnitArrangement(Unit Function(Unit) arrangement) => _unitArrangements.add(arrangement);
+  void addUnitArrangement(Unit Function(Unit) arrangement) =>
+      _unitArrangements.add(arrangement);
 
   /// Builds the unit using the factory and applies all arrangements.
   ///
@@ -46,6 +48,7 @@ mixin UnitBuilder<Unit, Args> {
   /// @return The built and arranged unit.
   Unit buildUnit(Args args) {
     if (_unitFactory == null) throw StateError('Unit factory is not set');
-    return _unitArrangements.reversed.fold(_unitFactory!(args), (unit, arrangement) => arrangement(unit));
+    return _unitArrangements.reversed
+        .fold(_unitFactory!(args), (unit, arrangement) => arrangement(unit));
   }
 }

@@ -22,7 +22,8 @@ mixin ArgsBuilder<Args> {
   /// Sets the factory function used to create arguments.
   ///
   /// This method is an alternative to [setArgs] and allows for dynamic argument creation.
-  void setArgsFactory(covariant ArgsFactory<Args> argsFactory) => _argsFactory = argsFactory;
+  void setArgsFactory(covariant ArgsFactory<Args> argsFactory) =>
+      _argsFactory = argsFactory;
 
   /// Sets the arguments directly.
   ///

@@ -27,7 +27,8 @@ import 'test_director.dart';
 ///
 /// @test For a complete example, see:
 class MaterialScreenWidgetDirector<Args> extends TestDirector<Widget, Args> {
-  void useMaterialApp() => addUnitArrangement((target) => MaterialApp(home: target));
+  void useMaterialApp() =>
+      addUnitArrangement((target) => MaterialApp(home: target));
 
   @override
   Widget construct({Args? args}) {
@@ -66,7 +67,8 @@ class MaterialScreenWidgetDirector<Args> extends TestDirector<Widget, Args> {
 class MaterialWidgetDirector<Args> extends TestDirector<Widget, Args> {
   void useMaterial() => addUnitArrangement((target) => Material(child: target));
   void useDirectionality([TextDirection textDirection = TextDirection.ltr]) =>
-      addUnitArrangement((target) => Directionality(textDirection: textDirection, child: target));
+      addUnitArrangement((target) =>
+          Directionality(textDirection: textDirection, child: target));
 
   @override
   Widget construct({Args? args}) {
